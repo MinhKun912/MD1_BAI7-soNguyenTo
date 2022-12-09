@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1 id="dis">Cac so nguyen so</h1>
+<input id="inp" type="text">
+<button onclick="timSo()" id="check">tim</button>
+
+
+<script>
+    function timSo() {
+        let n = document.getElementById('inp').value;
+        let stTn = 1;
+        for (let i = 2; i <= n; i++) {
+            stTn=1;
+            for (let j = 2; j <i; j++) {
+                if (i % j === 0) {
+                    stTn=0;
+                    break;
+                }
+
+            }if(stTn==1){
+                document.write(i + '<br>')
+            }
+        }
+    }
+
+
+</script>
+</body>
+</html>
